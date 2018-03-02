@@ -13,4 +13,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetCoreKata.ProductRepository\AspNetCoreKata.ProductRepository.csproj" />
+    <ProjectReference Include="..\AspNetCoreKata.Shared\AspNetCoreKata.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -20,7 +20,7 @@ namespace AspNetCoreKata.ProductRepository
             using (var conn = _connection)
             {
                 conn.Open();
-                return conn.Query<Product>("SELECT * FROM Product");
+                return conn.Query<Product>("SELECT Name, ProductId as Id FROM Product");
             }
         }
     }
