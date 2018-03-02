@@ -5,14 +5,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreKata.ProductRepository;
+using AspNetCoreKata.Shared;
 
 namespace AspNetCoreKata.Controllers
 {
     public class ProductController : Controller
     {
+        private readonly IProductRepository _repo;
+        public ProductController(IProductRepository repo)
+        {
+            _repo = repo;
+        }
         // GET: Product
         public ActionResult Index()
         {
+            var prod = _repo.GetAllProducts();
             return View();
         }
 
